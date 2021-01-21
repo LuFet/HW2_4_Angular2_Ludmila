@@ -1,0 +1,54 @@
+<!-- <app-new-item ></app-new-item> -->
+<hr>  
+<table class="col-12" class="table table-striped table-responsive-sm">
+  <thead>
+      <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>            
+          <th scope="col">
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle>
+                  Category
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button class="dropdown-item" (click)="switchCase1()" >Category 1</button>
+                  <button class="dropdown-item" (click)="switchCase2()">Category 2</button>
+                  <button class="dropdown-item" (click)="switchCase3()">Category 3</button>
+                </div>
+              </div>
+            </th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+      <tbody >
+          <tr *ngFor="let prod of products; let i=index" 
+          [class.bg-danger]="isBgDanger(i)"        
+          >
+              <td>{{prod.id}}</td>
+              <td>{{prod.name| uppercase }}</td>                
+              <td>{{prod.price}}</td>
+              <td>{{ prod.category }}</td>            
+              <td>
+                  <button class="btn" (click)="delete(i)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+              </td>
+          </tr>
+      </tbody>
+      <div [ngSwitch]="choice">
+        <div *ngSwitchCase="'1'">
+            Option 1
+        </div>
+        <div *ngSwitchCase="'2'">
+            Option 2
+        </div>
+        <div *ngSwitchCase="'3'">
+            Option 3
+        </div>
+        <div *ngSwitchDefault>
+            Default Option
+        </div>
+    </div>
+     
+</table>

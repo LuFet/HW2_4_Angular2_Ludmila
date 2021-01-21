@@ -1,0 +1,14 @@
+
+ tbody tr:nth-child(odd) {
+    background: rgb(174, 203, 231);
+    text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    padding: 0.25rem; 
+    text-align: center;
+    border: 1px solid #ccc;
+  }

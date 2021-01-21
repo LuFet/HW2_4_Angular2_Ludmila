@@ -1,0 +1,14 @@
+input{
+    background-color: rgb(174, 203, 231);
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    
+}
+label{
+    font-weight: bolder;
+}
+button{
+    background-color:  rgb(174, 203, 231);
+    border: 1px solid rgb(248, 150, 150);
+    font-weight: bolder;
+}

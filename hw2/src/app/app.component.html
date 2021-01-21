@@ -1,0 +1,13 @@
+<h1>Products</h1>
+<hr>
+<div class="container">
+  <nav>
+    <a routerLink="new-item" routerLinkActive="active">New Product</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <!-- <app-new-item></app-new-item>   --> 
+  <h4>column number</h4>
+  <input #col class="form-control" type="number" placeholder="10" [value]="countRows"
+        (input)="countRows = +col.value">
+  <app-my-table [rows]="countRows" ></app-my-table>    
+</div>
