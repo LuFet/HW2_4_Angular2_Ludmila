@@ -10,7 +10,7 @@ import { DataService } from "../data.service";
 })
 
 export class MyTableComponent implements OnInit, OnChanges {
-  public itemsSource: Product[] = PRODUCTS;
+  //public itemsSource: Product[] = PRODUCTS;
   products: any;
   // choice: string = "3";
    // private dataService: DataService внедрение зависимости через конструктор
