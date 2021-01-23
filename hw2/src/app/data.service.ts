@@ -5,12 +5,7 @@ import { PRODUCTS } from "./productsList";
 export class DataService {
     
     getData() {
-        const items: Product[] = [];
-        for (let i = 0; i<PRODUCTS.length; i++) {
-            items[i] = PRODUCTS[i];
-        }
-        console.log(items);
-        return items;
+        return PRODUCTS;
     }
     addData(product:Product){
         PRODUCTS.push(product);
@@ -19,6 +14,17 @@ export class DataService {
         PRODUCTS.splice(i,1);
     }
     
+    switchCase1(i: number) {
+        return i == null ? PRODUCTS : PRODUCTS.filter(obj => obj.category == i);
+    }
+    
 
+    isBgDanger(product: Product) {
+        if (product.price > 500) {
+          return true;
+        } else {
+          return false;
+        }
+      }
 }
 

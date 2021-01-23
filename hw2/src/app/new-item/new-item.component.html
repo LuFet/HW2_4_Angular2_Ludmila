@@ -2,18 +2,18 @@
 <h3>New product</h3>
 <div>
     <label class="col-2" for="id-input"> ID </label>
-    <input class="col-2"  type="text" [ngModel]="idValue" (ngModelChange)="idValue = $event" />
+    <input class="col-2"  type="text"  [(ngModel)]="idValue"/>
     <!-- <p>{{idValue}}</p>  -->
 </div>
 <div>
     <label class="col-2" for="name-input"> Name </label>
-    <input class="col-2" type="text" [ngModel]="nameValue" (ngModelChange)="nameValue = $event" />
+    <input class="col-2" type="text"  [(ngModel)]="nameValue" />
     <!-- <p>{{nameValue}}</p>  -->
 </div>
 
 <div>
     <label class="col-2" for="price-input"> Price </label>
-    <input class="col-2" type="text" [ngModel]="priceValue" (ngModelChange)="priceValue = $event" />
+    <input class="col-2" type="text" [(ngModel)]="priceValue" />
     <!-- <p>{{priceValue}}</p>  -->
 </div>
 

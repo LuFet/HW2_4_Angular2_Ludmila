@@ -6,8 +6,8 @@ import { NewItemComponent } from './new-item/new-item.component';
 
 const routes: Routes = [
   {path:'new-item', component: NewItemComponent},
-  {path:'my-table', component: MyTableComponent},
-  { path: "", redirectTo: "my-table", pathMatch: "full" }
+  // {path:'my-table', component: MyTableComponent},
+  // { path: "", redirectTo: "my-table", pathMatch: "full" }
 ];
 
 @NgModule({
